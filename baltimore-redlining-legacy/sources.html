@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baltimore Redlining Legacy | Sources &amp; Methods</title>
+  <meta name="description" content="Exactly what this project does and doesn't show, and every source it's built on." />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <div class="masthead">
+    <h1>Sources &amp; Methods</h1>
+    <p>What this project actually shows, what it doesn't, and where every fact came from.</p>
+    <nav class="site-nav">
+      <a href="index.html">Live Data</a>
+      <a href="history.html">Full History</a>
+      <a href="sources.html" class="active">Sources &amp; Methods</a>
+    </nav>
+  </div>
+
+  <div class="page">
+    <div class="card">
+      <h2>What this project does</h2>
+      <p>
+        This project pairs two kinds of data. The first is historical:
+        specific, named Baltimore neighborhoods and the grade the federal
+        Home Owners' Loan Corporation assigned them in 1937, each one
+        sourced to a specific citation you can check yourself. The
+        second is live: how many currently-open vacant building notices
+        Baltimore City's own housing department has on file for those
+        same neighborhoods right now, queried directly from the City's
+        public data feed.
+      </p>
+      <p>
+        Putting them side by side lets you see, for these specific
+        places, whether the pattern researchers have found citywide
+        &mdash; that historically lower-graded areas have measurably
+        worse outcomes today &mdash; shows up in one simple, live,
+        checkable number.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>What this project does <em>not</em> do</h2>
+      <p>
+        <strong>It is not the full 1937 map.</strong> The actual HOLC
+        survey graded roughly 42 separate areas across Baltimore. This
+        project covers five specific, well-documented named
+        neighborhoods where a real citation states the grade explicitly
+        &mdash; not an estimate, not an inference from a map image. That
+        is a deliberate, narrow scope, not an oversight.
+      </p>
+      <p>
+        <strong>It is not proof of causation.</strong> A handful of
+        neighborhoods showing a pattern consistent with published
+        research is illustrative, not a new statistical finding. The
+        peer-reviewed studies cited on the History page are the actual
+        evidence; this tool is a live, checkable window into part of
+        what they describe.
+      </p>
+      <p>
+        <strong>Vacancy notices are one indicator, not "neighborhood
+        decline."</strong> A vacant building notice reflects a specific
+        legal/administrative status, not a full picture of a
+        neighborhood's health. (A companion tool in this same project
+        family, Baltimore Vacant Property Watch, explains exactly what
+        that status does and doesn't mean if you want more detail.)
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Historic grade sources (per neighborhood)</h2>
+      <div id="neighborhood-sources"></div>
+    </div>
+
+    <div class="card">
+      <h2>History timeline sources</h2>
+      <div id="history-sources"></div>
+    </div>
+
+    <div class="card">
+      <h2>Live data source</h2>
+      <div class="source-entry">
+        <a href="https://egisdata.baltimorecity.gov/egis/rest/services/Housing/DHCD_Open_Baltimore_Datasets/FeatureServer/1" target="_blank" rel="noopener">Baltimore City DHCD &ndash; Vacant Building Notice (Open), ArcGIS FeatureServer</a>
+        <p>Queried live, directly from your browser, filtered to each neighborhood by name. This is the same confirmed endpoint used by the companion Baltimore Vacant Property Watch tool in this project family.</p>
+      </div>
+    </div>
+
+    <footer>
+      Have a correction or a citation for one of the other ~37 HOLC-graded areas not covered here? See the project's README for how to contribute one, following the same one-citation-per-fact standard used throughout.
+    </footer>
+  </div>
+
+  <script src="src/history.js"></script>
+  <script src="src/holcNeighborhoods.js"></script>
+  <script src="src/sourcesPage.js"></script>
+</body>
+</html>

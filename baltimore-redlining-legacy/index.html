@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baltimore Redlining Legacy | Live Dashboard</title>
+  <meta name="description" content="See whether Baltimore's 1937 redlining grades still show up in today's vacant-housing data, neighborhood by neighborhood." />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <div class="masthead">
+    <h1>The Legacy of Redlining in Baltimore</h1>
+    <p>In 1937, the federal government graded Baltimore neighborhoods by race. Nearly 90 years later, does it still show?</p>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Live Data</a>
+      <a href="history.html">Full History</a>
+      <a href="sources.html">Sources &amp; Methods</a>
+    </nav>
+  </div>
+
+  <div class="page">
+    <div class="howto">
+      <h2>How to use this page</h2>
+      <ol>
+        <li>This page automatically loads live data from Baltimore City's own housing department for five specific, well-documented neighborhoods.</li>
+        <li>Each neighborhood shows its 1937 grade (the colored circle) and how many vacant building notices it has right now.</li>
+        <li>Scroll down to see the same information summarized by grade &mdash; and read the full history on the "Full History" page above.</li>
+      </ol>
+    </div>
+
+    <p id="load-status" class="status-line">Loading live data from Baltimore City\u2026</p>
+
+    <div id="neighborhood-cards"></div>
+
+    <div class="card" id="summary-card" style="display:none;">
+      <h2>Average vacant notices today, by 1937 grade</h2>
+      <p style="font-size: 0.95rem; color:#666; margin-top:-0.4rem;">
+        Based only on the neighborhoods above &mdash; not a citywide claim.
+        See the Sources page for exactly what this does and doesn't show.
+      </p>
+      <div id="grade-summary-bars"></div>
+      <p id="gradient-note" style="font-size: 0.95rem; margin-top: 1rem;"></p>
+    </div>
+
+    <div class="disclaimer">
+      This page live-queries Baltimore City's public vacant building
+      notice data. It is not an official City of Baltimore website, and
+      it does not claim these five neighborhoods represent the whole
+      city &mdash; see the Sources &amp; Methods page for exactly what
+      this tool does and doesn't show, and why.
+    </div>
+
+    <footer>
+      Historic grades: Mapping Inequality (Univ. of Richmond Digital Scholarship Lab) via secondary sources listed on the Sources page &middot;
+      Live data: Baltimore City DHCD, Vacant Building Notice \u2013 Open
+    </footer>
+  </div>
+
+  <script src="src/holcNeighborhoods.js"></script>
+  <script src="src/vacancyApi.js"></script>
+  <script src="src/legacyAnalysis.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

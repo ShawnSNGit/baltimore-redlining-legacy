@@ -1,0 +1,9 @@
+{
+  "name": "baltimore-redlining-legacy",
+  "version": "1.0.0",
+  "description": "The history of housing segregation in Baltimore, and a live look at whether its 1930s redlining grades still show up in today's vacant-housing data.",
+  "main": "src/legacyAnalysis.js",
+  "scripts": { "test": "jest --coverage" },
+  "license": "MIT",
+  "devDependencies": { "jest": "^29.7.0" }
+}

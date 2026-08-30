@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --navy: #2b2118;
+  --navy-light: #4a3c2b;
+  --gold: #b5762b;
+  --red: #a6192e;
+  --green: #256b3a;
+  --green-bg: #e5f2e8;
+  --red-bg: #fbe6e9;
+  --cream: #fbf9f4;
+  --paper: #ffffff;
+  --line: #dfd9c8;
+  --text: #1b1b1b;
+
+  --display: 'Merriweather', Georgia, serif;
+  --body: 'Inter', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+.masthead {
+  background: var(--navy);
+  color: #fff;
+  margin: 0 -1.25rem 1.5rem;
+  padding: 2rem 1.25rem 1.5rem;
+  border-bottom: 6px solid var(--gold);
+  text-align: center;
+}
+
+.masthead h1 {
+  font-family: var(--display);
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+.masthead p {
+  font-size: 1.05rem;
+  color: #d9ddea;
+  margin: 0;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+/* ---------- Big plain-language instructions ---------- */
+
+.howto {
+  background: #fff8e1;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.howto h2 {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+  color: var(--navy);
+}
+
+.howto ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.howto li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.howto li:last-child { margin-bottom: 0; }
+
+/* ---------- Search ---------- */
+
+.search-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(20,41,77,0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-card label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.search-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input[type='text'] {
+  width: 100%;
+  font-family: var(--body);
+  font-size: 1.15rem;
+  padding: 0.9rem 1rem;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--text);
+}
+
+input[type='text']:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+
+button.search-btn {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.95rem 1.4rem;
+  cursor: pointer;
+}
+
+button.search-btn:hover { background: var(--navy-light); }
+
+.example-hint {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.6rem 0 0;
+}
+
+/* ---------- Results ---------- */
+
+.status-line {
+  font-size: 1.05rem;
+  margin: 0 0 1rem;
+}
+
+.status-line.error { color: var(--red); font-weight: 600; }
+
+.result-card {
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.result-card.flagged { border-color: var(--red); }
+.result-card.clear { border-color: var(--green); }
+
+.result-tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.result-tag.flagged { background: var(--red-bg); color: var(--red); }
+.result-tag.clear { background: var(--green-bg); color: var(--green); }
+.result-tag.unknown { background: #eee; color: #555; }
+
+.result-address {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  margin: 0 0 0.4rem;
+}
+
+.result-meta {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.15rem 0;
+}
+
+/* ---------- About / disclaimer ---------- */
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  margin: 0 0 0.9rem;
+  color: var(--navy);
+}
+
+.card p {
+  font-size: 1.02rem;
+  margin: 0 0 0.85rem;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+.card a { color: var(--navy-light); }
+
+.disclaimer {
+  font-size: 0.98rem;
+  border-left: 4px solid var(--gold);
+  padding: 0.9rem 1.1rem;
+  background: #fff;
+  margin-bottom: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- Nav ---------- */
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.site-nav a {
+  color: #e8e0d0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 999px;
+}
+
+.site-nav a.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #241a0e;
+  font-weight: 700;
+}
+
+/* ---------- HOLC grade badges ---------- */
+
+.grade-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.grade-badge.grade-A { background: #2f7a3d; }
+.grade-badge.grade-B { background: #2f5f9e; }
+.grade-badge.grade-C { background: #c99a1f; }
+.grade-badge.grade-D { background: #a6192e; }
+
+.neighborhood-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.neighborhood-card .nb-name {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem;
+}
+
+.neighborhood-card .nb-summary {
+  font-size: 0.98rem;
+  color: #555;
+  margin: 0 0 0.5rem;
+}
+
+.neighborhood-card .nb-live {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.neighborhood-card .nb-live.loading { color: #888; font-weight: 400; }
+.neighborhood-card .nb-live.high { color: var(--red); }
+.neighborhood-card .nb-live.low { color: var(--green); }
+
+.neighborhood-card .nb-citation {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.4rem;
+}
+.neighborhood-card .nb-citation a { color: var(--navy-light); }
+
+/* ---------- Grade summary bars ---------- */
+
+.grade-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.grade-summary-row .gs-label {
+  width: 2.2rem;
+  text-align: center;
+}
+
+.grade-summary-row .gs-bar-track {
+  flex: 1;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  height: 1.6rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.grade-summary-row .gs-bar-fill {
+  height: 100%;
+  border-radius: 6px 0 0 6px;
+}
+.gs-bar-fill.grade-A { background: #2f7a3d; }
+.gs-bar-fill.grade-B { background: #2f5f9e; }
+.gs-bar-fill.grade-C { background: #c99a1f; }
+.gs-bar-fill.grade-D { background: #a6192e; }
+
+.grade-summary-row .gs-value {
+  width: 5rem;
+  text-align: right;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ---------- Timeline (history page) ---------- */
+
+.timeline-entry {
+  border-left: 3px solid var(--gold);
+  padding-left: 1.3rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0.35rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.timeline-entry .te-year {
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
+}
+
+.timeline-entry h3 {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: var(--navy);
+}
+
+.timeline-entry p {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.timeline-entry .te-citation {
+  font-size: 0.9rem;
+  color: #777;
+}
+.timeline-entry .te-citation a { color: var(--navy-light); }
+
+/* ---------- Sources page ---------- */
+
+.source-entry {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.source-entry:last-child { border-bottom: none; }
+.source-entry a { color: var(--navy-light); font-weight: 600; }
+.source-entry p { margin: 0.2rem 0 0; font-size: 0.92rem; color: #666; }
+
+
+footer a { color: var(--navy-light); }
